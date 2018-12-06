@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="WindowController">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button layoutX="294.0" layoutY="314.0" mnemonicParsing="false" onAction="#handleJoin" text="Join" />
+            <Label layoutX="67.0" layoutY="283.0" text="Server" />
+            <Label layoutX="70.0" layoutY="318.0" text="Port" />
+            <TextField fx:id="serverIP" layoutX="124.0" layoutY="279.0" />
+            <TextField fx:id="port" layoutX="124.0" layoutY="314.0" />
+            <HBox layoutX="472.0" layoutY="327.0" prefWidth="200.0" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0">
+               <children>
+                  <Label layoutX="379.0" layoutY="318.0" text="Join Status:" />
+                  <Label fx:id="joinStatusLabel" layoutX="439.0" layoutY="318.0" text="Label" />
+               </children>
+            </HBox>
+            <ListView fx:id="clientList" layoutX="370.0" layoutY="25.0" prefHeight="200.0" prefWidth="200.0" />
+            <Circle fx:id="ball" fill="DODGERBLUE" layoutX="281.0" layoutY="137.0" radius="51.0" stroke="BLACK" strokeType="INSIDE" />
+            <Button layoutX="350.0" layoutY="267.0" mnemonicParsing="false" onAction="#handleStart" text="Start" />
+            <Button fx:id="btnPass" layoutX="430.0" layoutY="267.0" mnemonicParsing="false" onAction="#handlePass" text="Pass" />
+            <TextField fx:id="txtName" layoutX="124.0" layoutY="237.0" />
+            <Text layoutX="76.0" layoutY="254.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name" />
+            <ListView fx:id="playerList" layoutX="24.0" layoutY="25.0" prefHeight="200.0" prefWidth="200.0" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
